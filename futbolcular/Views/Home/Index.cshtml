@@ -1,0 +1,40 @@
+﻿@using futbolcular.Models.ViewModel
+@model teknikdirektorFutbolcularListesiViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<div class="container">
+    <div class="col-md-8">
+        <div class="card" style="width: 18rem;">
+            <img style="width:200px;" src="@Model.teknikdirektorBilgisi.Url" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@Model.teknikdirektorBilgisi.Ad - @Model.teknikdirektorBilgisi.Soyad - @Model.teknikdirektorBilgisi.Yas</h5>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        @foreach (var item in Model.futbolcuBigisi)
+        {
+            <div class="card" style="width: 18rem;">
+               <a href="/Home/FutbolcuDetayi/@item.ID"><img style="width:150px;" src="@item.Url" class="card-img-top" alt="..."></a> 
+                <div class="card-body">
+                    <h5 class="card-title">@item.Ad - @item.Soyad - @item.Yas</h5>
+                    
+                    
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,17 @@
+﻿@using futbolcular.Models
+@model futbocularx
+
+@{
+    ViewBag.Title = "FutbolcuDetayi";
+}
+
+<h2>FutbolcuDetayi</h2>
+
+<div class="card" style="width: 18rem;">
+    <img style="width:500px;" src="@Model.Url" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h3 class="card-title">@Model.Ad - @Model.Soyad - @Model.Yas</h3>
+        <p class="card-text">@Model.Yazi</p>
+       
+    </div>
+</div>
